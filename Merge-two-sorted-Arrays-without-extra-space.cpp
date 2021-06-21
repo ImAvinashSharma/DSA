@@ -16,15 +16,14 @@ class Solution{
                         swap(arr1[i], arr1[i+gap]);
                 }
             for(j = (gap > n) ? (gap - n) : 0; i < n && j < m; i++, j++ ){
-            if(arr1[i] > arr2[j]) // whenever element in 1st array is greater then 2nd array swap the element and move ahead
-            swap(arr1[i], arr2[j]);
-        }
-
-//Comparing elements in second array arr2[]
+                if(arr1[i] > arr2[j]) // whenever element in 1st array is greater then 2nd array swap the element and move ahead
+                    swap(arr1[i], arr2[j]);
+            }
+            //Comparing elements in second array arr2[]
             if(j < m){
                 for(j = 0; j + gap < m; j++){
                     if(arr2[j] > arr2[j + gap])
-                    swap(arr2[j], arr2[j+gap]);
+                        swap(arr2[j], arr2[j+gap]);
                 }
             }
         }
